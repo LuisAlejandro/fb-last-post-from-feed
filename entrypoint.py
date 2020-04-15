@@ -26,22 +26,19 @@ for post in FEED_DATA.items:
     ITEM_TITLE = u(html_unescape(post.title))
     ITEM_LINK = u(post.guid)
 
-    # if ITEM_TIMESTAMP >= LAST_TIMESTAMP:
+    if ITEM_TIMESTAMP >= LAST_TIMESTAMP:
 
-    FACEBOOK_API_DATA = {'message': ITEM_TITLE,
-                            'link': ITEM_LINK,
-                            'access_token': FACEBOOK_ACCESS_TOKEN}
+        FACEBOOK_API_DATA = {'message': ITEM_TITLE,
+                             'link': ITEM_LINK,
+                             'access_token': FACEBOOK_ACCESS_TOKEN}
 
-    HTTP_REQUEST = Request(url=FACEBOOK_API_END,
-                            data=s(urlencode(FACEBOOK_API_DATA)))
+        HTTP_REQUEST = Request(url=FACEBOOK_API_END,
+                               data=s(urlencode(FACEBOOK_API_DATA)))
 
-    print(vars(HTTP_REQUEST))
+        while True:
 
-    while True:
+            RESULT = json.loads(urlopen(HTTP_REQUEST).read())
 
-        RESULT = json.loads(urlopen(HTTP_REQUEST).read())
-
-        if 'error' not in RESULT:
-            print('Publicación exitosa: '+ITEM_LINK)
-            break
-    raise
+            if 'error' not in RESULT:
+                print('Publicación exitosa: '+ITEM_LINK)
+                break
