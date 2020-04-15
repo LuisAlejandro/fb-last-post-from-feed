@@ -1,31 +1,11 @@
 # Changelog
 
 
-## 0.1.2 (2020-04-15)
-
-### Changes
-
-* Changing branding. [Luis Alejandro Martínez Faneyth]
-
-### Fix
-
-* Fixing entrypoint for testing. [Luis Alejandro Martínez Faneyth]
-
-
-## 0.1.1 (2020-04-15)
-
-### Changes
-
-* Removing travis builds. [Luis Alejandro Martínez Faneyth]
-
-* Configuring github actions to user docker. [Luis Alejandro Martínez Faneyth]
-
-
 ## 0.1.0 (2020-04-15)
 
 ### Changes
 
-* Configuring bumpversion. [Luis Alejandro Martínez Faneyth]
+* Removing debug info. [Luis Alejandro Martínez Faneyth]
 
 * Improving readme. [Luis Alejandro Martínez Faneyth]
 
