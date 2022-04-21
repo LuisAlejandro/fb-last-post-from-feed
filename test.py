@@ -17,6 +17,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import os
+import time
 import datetime
 from urllib.request import urlopen
 from html import unescape
@@ -30,7 +31,7 @@ access_token = os.environ.get('FACEBOOK_ACCESS_TOKEN')
 page_id = os.environ.get('FACEBOOK_PAGE_ID')
 feed_url = os.environ.get('FEED_URL')
 max_count = int(os.environ.get('MAX_COUNT', 1))
-post_lookback = int(os.environ.get('POST_LOOKBACK', 48 * 60 * 60))
+post_lookback = int(os.environ.get('POST_LOOKBACK', 1 * 60 * 60))
 
 if not feed_url:
     raise Exception('No FEED_URL provided.')
@@ -55,6 +56,8 @@ for post in feed_data.items:
 
     if item_timestamp > last_timestamp:
         count += 1
-        graph.post_object(object_id=page_id,
-                          connection='feed',
-                          data=data)
+        fb = graph.post_object(object_id=page_id,
+                               connection='feed',
+                               data=data)
+        time.sleep(10)
+        graph.delete_object(object_id=fb['id'])

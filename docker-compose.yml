@@ -1,0 +1,12 @@
+version: "3"
+services:
+  fb-last-post-from-feed:
+    image: luisalejandro/fb-last-post-from-feed:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /home/luisalejandro/app
+    volumes:
+      - .:/home/luisalejandro/app
+    env_file:
+      - .env
