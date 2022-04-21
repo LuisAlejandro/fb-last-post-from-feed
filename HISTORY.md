@@ -1,9 +1,16 @@
 # Changelog
 
 
+## 0.2.0 (2022-04-21)
+
+### Changed
+
+* Using third party library to publish posts. [Luis Alejandro Martínez Faneyth]
+
+
 ## 0.1.0 (2020-04-15)
 
-### Changes
+### Changed
 
 * Removing debug info. [Luis Alejandro Martínez Faneyth]
 
@@ -19,9 +26,11 @@
 
 * Migrating from Openshift to GitLab. [Luis Alejandro Martínez Faneyth]
 
-### Fix
+
+### Fixed
 
 * Fixing script command. [Luis Alejandro Martínez Faneyth]
+
 
 ### Other
 
@@ -32,5 +41,4 @@
 * S. [Luis Alejandro Martínez Faneyth]
 
 * Creating template. [Template builder]
-
 
