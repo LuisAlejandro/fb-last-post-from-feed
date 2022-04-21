@@ -1,6 +1,6 @@
 Contributor License Agreement Version 1.0
 
-Copyright (C) 2020-2022, Tweet last post from feed Developers.
+Copyright (C) 2020-2022, Facebook last post from feed Developers.
 
 Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
 
