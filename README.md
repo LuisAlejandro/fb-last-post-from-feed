@@ -1,12 +1,4 @@
-<p align='center'>
-  <img src="https://github.com/LuisAlejandro/fb-last-post-from-feed/blob/develop/branding/banner.svg">
-  <h3 align="center">Facebook last post from feed</h3>
-  <p align="center">GitHub Action for posting the latest entry from an atom feed to a facebook page</p>
-</p>
-
----
-
-Current version: 0.2.0
+# Development of this app has been halted in favor of [Agoras](https://github.com/LuisAlejandro/agoras)
 
 ## 🎒 Prep Work
 1. Get a facebook permanent access token (explained below) using a facebook account that owns the page where you want to post messages.
